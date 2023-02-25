@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from matplotlib import image
 import seaborn as sns
 import os
-import pathlib
 
 st.set_page_config(page_title="Exploring the Titanic Dataset", page_icon=":ship:")
 
@@ -18,16 +17,8 @@ In this website, we will explore the Titanic dataset and gain insights into the 
 Let's dive in!
 """
 
-# FILE_DIR = os.path.dirname(os.path.abspath(__file__))
-# PARENT_DIR = os.path.join(FILE_DIR, os.pardir)
-#dir_of_interest = os.path.join(PARENT_DIR, "resources")
-
-FILE_PATH = pathlib.Path(__file__)
-FILE_DIR = FILE_PATH.cwd()
-dir_of_interest = FILE_DIR / "resources"
-
-IMAGE_PATH = dir_of_interest / "images" / "titanic.jpg"
-DATA_PATH = dir_of_interest / "data" / "titanic.csv"
+IMAGE_PATH = os.path.join("resources" , "images" , "titanic.jpg")
+DATA_PATH = os.path.join("resources" , "images" , "titanic.csv")
 
 img = image.imread(IMAGE_PATH)
 st.image(img)
