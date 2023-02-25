@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-from PIL import Image
+from matplotlib import image
 import seaborn as sns
 import os
 
@@ -17,10 +17,10 @@ In this website, we will explore the Titanic dataset and gain insights into the 
 Let's dive in!
 """
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))
-IMAGE_PATH = os.path.join("resources" , "images" , "titanic.jpg")
-DATA_PATH = os.path.join("resources" , "images" , "titanic.csv")
+IMAGE_PATH = os.path.join("resources","images","titanic.jpg")
+DATA_PATH = os.path.join("resources","images","titanic.csv")
 
-img = Image.open(IMAGE_PATH)
+img = image.imread(IMAGE_PATH)
 st.image(img)
 
 titanic_data = pd.read_csv(DATA_PATH)
