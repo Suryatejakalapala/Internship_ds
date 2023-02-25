@@ -16,9 +16,12 @@ In this website, we will explore the Titanic dataset and gain insights into the 
 
 Let's dive in!
 """
-FILE_DIR = os.path.dirname(os.path.abspath(__file__))
-IMAGE_PATH = os.path.join("resources","images","titanic.jpg")
-DATA_PATH = os.path.join("resources","images","titanic.csv")
+FILE_PATH = pathlib.Path(__file__)
+FILE_DIR = FILE_PATH.cwd()
+dir_of_interest = FILE_DIR / "resources"
+
+IMAGE_PATH = dir_of_interest / "images" / "titanic.jpg"
+DATA_PATH = dir_of_interest / "data" / "titanic.csv"
 
 img = image.imread(IMAGE_PATH)
 st.image(img)
