@@ -16,7 +16,7 @@ In this website, we will explore the Titanic dataset and gain insights into the 
 
 Let's dive in!
 """
-
+FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 IMAGE_PATH = os.path.join("resources" , "images" , "titanic.jpg")
 DATA_PATH = os.path.join("resources" , "images" , "titanic.csv")
 
