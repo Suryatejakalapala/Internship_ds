@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib import image
 import seaborn as sns
 import os
-
+import pathlib
 st.set_page_config(page_title="Exploring the Titanic Dataset", page_icon=":ship:")
 
 intro = """
