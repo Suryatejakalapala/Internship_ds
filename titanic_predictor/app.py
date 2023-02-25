@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-from matplotlib import image
+from PIL import Image
 import seaborn as sns
 import os
 
@@ -20,7 +20,7 @@ Let's dive in!
 IMAGE_PATH = os.path.join("resources" , "images" , "titanic.jpg")
 DATA_PATH = os.path.join("resources" , "images" , "titanic.csv")
 
-img = image.imread(IMAGE_PATH)
+img = Image.open(IMAGE_PATH)
 st.image(img)
 
 titanic_data = pd.read_csv(DATA_PATH)
