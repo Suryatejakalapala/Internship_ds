@@ -18,7 +18,7 @@ Let's dive in!
 """
 FILE_PATH = pathlib.Path(__file__)
 FILE_DIR = FILE_PATH.cwd()
-dir_of_interest = FILE_DIR / "resources"
+dir_of_interest = FILE_DIR /"titanic_predictor"/"resources"
 
 IMAGE_PATH = dir_of_interest / "images" / "titanic.jpg"
 DATA_PATH = dir_of_interest / "data" / "titanic.csv"
